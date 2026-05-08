@@ -22,7 +22,15 @@
       "Bash(mkdir -p \"c:/Users/Dave/Documents/Websites Work/Startbookingnow/.claude\")",
       "Bash(git init *)",
       "Bash(git remote *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git config *)",
+      "Bash(git push *)",
+      "Bash(node screenshot.mjs http://localhost:3000 mobile-nav)",
+      "PowerShell(@\\(\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"C:\\\\Program Files \\(x86\\)\\\\nodejs\\\\node.exe\",\"$env:APPDATA\\\\npm\\\\node.exe\",\"$env:LOCALAPPDATA\\\\Programs\\\\nodejs\\\\node.exe\"\\) | Where-Object { Test-Path $_ })",
+      "PowerShell(Start-Process -NoNewWindow -FilePath \"python\" -ArgumentList \"-m http.server 3000 --directory `\"c:\\\\Users\\\\Dave\\\\Documents\\\\Websites Work\\\\Startbookingnow`\"\" -PassThru)",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 5)",
+      "PowerShell(\\(Get-Item \"c:\\\\Users\\\\Dave\\\\Documents\\\\Websites Work\\\\Startbookingnow\\\\fr.html\"\\).Length)"
     ],
     "additionalDirectories": [
       "c:\\Users\\Dave\\Documents\\Websites Work\\Startbookingnow\\.claude"
