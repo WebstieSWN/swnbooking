@@ -133,7 +133,7 @@ nav {
   color: var(--on-dark-muted);
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700; font-size: 13px; text-decoration: none;
-  padding: 5px 10px; border-radius: 20px;
+  padding: 6px 16px; border-radius: 20px;
   transition: all 0.2s; border: 1px solid transparent;
 }
 .lang-btn:hover { color: var(--on-dark-h); background: rgba(255,255,255,0.1); }
@@ -250,15 +250,20 @@ nav {
 
 .btn-primary {
   display: inline-flex; align-items: center; gap: 10px;
-  background: var(--accent); color: white;
+  background: linear-gradient(135deg, #FF6B35 0%, #e8501a 100%);
+  color: white;
   font-family: 'Nunito', sans-serif;
   font-weight: 800; font-size: 17px;
   padding: 16px 36px; border-radius: 50px;
   text-decoration: none;
-  box-shadow: 0 8px 30px rgba(255,107,53,0.45);
-  transition: all 0.25s;
+  box-shadow: 0 4px 18px rgba(220,70,20,0.45), inset 0 1px 0 rgba(255,255,255,0.2);
+  transition: opacity 0.18s ease, box-shadow 0.18s ease;
+  will-change: opacity;
 }
-.btn-primary:hover { background: #FF4F1A; transform: translateY(-3px); box-shadow: 0 12px 40px rgba(255,107,53,0.55); }
+.btn-primary:hover {
+  opacity: 0.88;
+  box-shadow: 0 6px 22px rgba(220,70,20,0.55), inset 0 1px 0 rgba(255,255,255,0.2);
+}
 
 .btn-secondary {
   display: inline-flex; align-items: center; gap: 8px;
@@ -374,7 +379,7 @@ nav {
 }
 .trust-item {
   display: flex; align-items: center; gap: 10px;
-  font-size: 14px; font-weight: 700; color: var(--text-mid);
+  font-size: 16px; font-weight: 700; color: var(--text-mid);
 }
 .trust-icon { font-size: 22px; }
 
@@ -418,7 +423,7 @@ section { padding: 90px 40px; }
 }
 .step-emoji { font-size: 40px; margin-bottom: 16px; display: block; }
 .step-title { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 18px; color: var(--text-dark); margin-bottom: 10px; }
-.step-desc { font-size: 14px; color: var(--text-mid); line-height: 1.6; }
+.step-desc { font-size: 15px; color: var(--text-mid); line-height: 1.6; text-align: right; }
 
 .step-arrow {
   display: flex; align-items: center; justify-content: center;
@@ -619,7 +624,7 @@ section { padding: 90px 40px; }
   background: linear-gradient(135deg, #0A2FA8 0%, #1A5FE8 50%, #2B8FFF 100%);
   padding: 80px 40px; text-align: center; position: relative; overflow: hidden;
 }
-.cta-banner h2 { font-size: clamp(28px,4vw,48px); font-weight: 900; color: white; margin-bottom: 16px; letter-spacing: -0.5px; }
+.cta-banner h2 { font-size: clamp(28px,4vw,48px); font-weight: 900; color: white; margin-bottom: 28px; letter-spacing: -0.5px; }
 .cta-banner p { font-size: 18px; color: rgba(255,255,255,0.85); margin-bottom: 36px; }
 .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
@@ -651,6 +656,49 @@ footer a:hover { color: white; }
 .tr-word  { display: inline-flex; overflow: hidden; padding-bottom: 0.06em; }
 .tr-char  { display: inline-block; }
 
+/* ── MOBILE PLAN SLIDER ── */
+.mobile-compare { display: none; }
+.mobile-plan-tabs {
+  display: flex; border-radius: 12px; overflow: hidden;
+  border: 2px solid var(--blue-pale); margin-bottom: 20px;
+}
+.mobile-tab-btn {
+  flex: 1; padding: 14px 10px; border: none; cursor: pointer;
+  font-family: 'Ubuntu', sans-serif; font-weight: 700; font-size: 15px;
+  background: var(--blue-pale); color: var(--text-mid); transition: all 0.2s;
+}
+.mobile-tab-btn em { display: block; font-style: normal; font-size: 13px; font-weight: 400; }
+.mobile-tab-btn.active { background: var(--blue-main); color: white; }
+.mobile-plan-slider { overflow: hidden; border-radius: 16px; box-shadow: 0 8px 32px rgba(11,61,145,0.15); }
+.mobile-plan-track { display: flex; transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+.mobile-plan-card { min-width: 100%; }
+.mplan-header-std { background: #0F3CC9; }
+.mplan-header-prem { background: linear-gradient(160deg, #1A0A6B 0%, #2B1FD9 100%); }
+.mobile-plan-header { padding: 28px 24px; text-align: center; color: white; }
+.mobile-plan-badge {
+  display: inline-block; background: var(--green); color: #0D1B4B;
+  font-size: 10px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.08em; padding: 3px 10px; border-radius: 50px; margin-bottom: 8px;
+}
+.mobile-plan-label { font-size: 11px; font-weight: 700; opacity: 0.6; text-transform: uppercase; letter-spacing: 0.06em; }
+.mobile-plan-name { font-size: 26px; font-weight: 900; margin: 4px 0; }
+.mobile-plan-price { font-size: 52px; font-weight: 900; line-height: 1; margin: 8px 0 16px; }
+.mobile-plan-price sup { font-size: 22px; vertical-align: top; margin-top: 10px; display: inline-block; }
+.mobile-plan-price small { font-size: 16px; font-weight: 600; opacity: 0.7; }
+.mobile-feature-list { background: white; }
+.mobile-feature-group {
+  background: var(--blue-pale); color: var(--blue-main);
+  font-size: 11px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.08em; padding: 10px 20px;
+}
+.mobile-feature-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 20px; border-bottom: 1px solid var(--blue-pale);
+  font-size: 14px; font-weight: 600; color: var(--text-dark);
+}
+.mobile-feature-footer { padding: 24px 20px; background: white; text-align: center; }
+.mobile-cancel-note { font-size: 12px; color: var(--text-light); margin-top: 10px; }
+
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; gap: 40px; }
   .hero-visual { display: none; }
@@ -658,11 +706,41 @@ footer a:hover { color: white; }
   .features-grid { grid-template-columns: 1fr; }
   .industries-grid { grid-template-columns: repeat(2, 1fr); }
   .faq-grid { grid-template-columns: 1fr; }
-  nav { padding: 0 20px; }
+  nav { padding: 0 16px; }
   .group-banner { font-size: 11px; padding: 5px 12px; }
   section { padding: 60px 20px; }
   .trust-bar { gap: 24px; padding: 20px; }
   #pricing > .container > div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 768px) {
+  /* Hide desktop compare table, show mobile slider */
+  .compare-wrap, .table-scroll-hint { display: none !important; }
+  .mobile-compare { display: block; }
+}
+
+@media (max-width: 640px) {
+  /* Hide tagline so nav stays on one clean line */
+  .nav-logo .tagline { display: none; }
+  .nav-logo { font-size: 20px; }
+  .nav-cta { font-size: 13px; padding: 0 14px; height: 38px; }
+  .lang-switcher { display: none; }
+  .hero { padding: 110px 20px 50px; }
+  .hero-sub { font-size: 16px; }
+  .hero-btns { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .btn-primary, .btn-secondary { font-size: 15px; padding: 14px 28px; }
+  .section-title { font-size: clamp(22px, 6vw, 32px); }
+  .section-sub { font-size: 15px; }
+  .trust-bar { gap: 14px; }
+  .trust-item { font-size: 13px; }
+  /* Step descriptions: reset right-align to center when cards stack */
+  .step-desc { text-align: center; }
+  /* Industries: single column on small phones */
+  .industries-grid { grid-template-columns: 1fr; }
+  .cta-banner { padding: 60px 20px; }
+  .cta-banner p { font-size: 15px; }
+  .cta-btns { flex-direction: column; align-items: center; }
+  footer { padding: 30px 20px; }
 }
 </style>
 </head>
@@ -677,7 +755,7 @@ footer a:hover { color: white; }
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
-    <img src="brand_assets/start-website-now-512-astronaut.png" alt="" style="height:28px;vertical-align:middle;margin-right:8px;border-radius:4px;"> StartBookingNow<span class="tagline">Booking Sites Built to Grow Your Business</span></a>
+    <img src="brand_assets/start-website-now-512-astronaut.png" alt="" style="height:34px;vertical-align:middle;margin-right:5px;border-radius:4px;"> Start Booking Now<span class="tagline">Booking Sites Built to Grow Your Business</span></a>
   <div class="nav-right">
     <div class="lang-switcher">
       <a href="#" class="lang-btn active">🇬🇧 EN</a>
@@ -954,14 +1032,14 @@ footer a:hover { color: white; }
       As part of the Start Website Now Group, we believe powerful tools shouldn't carry a punishing price tag. That's why we forge direct partnerships with industry-leading software providers, negotiating access to their top-tier plans so we can pass the real value on to you. What you get here is the same technology used by growing businesses worldwide, served at a price that makes sense for where you are right now.
     </p>
     <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
-      <div style="display:flex; align-items:center; gap:10px; background:var(--blue-pale); padding:14px 22px; border-radius:50px; font-size:14px; font-weight:700; color:var(--text-dark);">
-        <span style="font-size:20px;">🤝</span> Direct software partnerships
+      <div style="display:flex; align-items:center; background:var(--blue-pale); padding:14px 22px; border-radius:50px; font-size:16px; font-weight:700; color:var(--text-dark);">
+        Direct software partnerships
       </div>
-      <div style="display:flex; align-items:center; gap:10px; background:var(--blue-pale); padding:14px 22px; border-radius:50px; font-size:14px; font-weight:700; color:var(--text-dark);">
-        <span style="font-size:20px;">🏆</span> Industry-leading platforms
+      <div style="display:flex; align-items:center; background:var(--blue-pale); padding:14px 22px; border-radius:50px; font-size:16px; font-weight:700; color:var(--text-dark);">
+        Industry-leading platforms
       </div>
-      <div style="display:flex; align-items:center; gap:10px; background:var(--blue-pale); padding:14px 22px; border-radius:50px; font-size:14px; font-weight:700; color:var(--text-dark);">
-        <span style="font-size:20px;">💶</span> Honest, affordable pricing
+      <div style="display:flex; align-items:center; background:var(--blue-pale); padding:14px 22px; border-radius:50px; font-size:16px; font-weight:700; color:var(--text-dark);">
+        Honest, affordable pricing
       </div>
     </div>
   </div>
@@ -976,6 +1054,7 @@ footer a:hover { color: white; }
       <p class="section-sub" style="margin: 0 auto;">No setup fees. No commissions. No hidden charges. Full hosting included with every plan. Choose whether you want your own custom domain too.</p>
     </div>
 
+    <p style="display:none;text-align:center;font-size:13px;color:var(--text-light);margin-bottom:10px;" class="table-scroll-hint">← Swipe to compare →</p>
     <div class="compare-wrap">
 
       <!-- Header row -->
@@ -987,13 +1066,13 @@ footer a:hover { color: white; }
             <div class="compare-plan-label">Monthly</div>
             <div class="compare-plan-name">Standard</div>
             <div class="compare-plan-price"><span>€</span>20<small>/mo</small></div>
-            <a href="#store" class="compare-btn compare-btn-standard">🚀 Get Standard</a>
+            <a href="https://swn.agencyhandy.com/catalog/booking-site-software-online-appointment-and-scheduling-platform-copy-1777800156474362" target="_blank" class="compare-btn compare-btn-standard">🚀 Get Standard</a>
           </div>
           <div class="compare-plan-col compare-plan-premium">
             <div class="compare-plan-badge">Most Popular</div>
             <div class="compare-plan-name">Premium</div>
             <div class="compare-plan-price"><span>€</span>23<small>/mo</small></div>
-            <a href="#store" class="compare-btn compare-btn-premium">🌐 Get Premium</a>
+            <a href="https://swn.agencyhandy.com/catalog/booking-site-software-online-appointment-and-scheduling-platform-copy-1777800156474362" target="_blank" class="compare-btn compare-btn-premium">🌐 Get Premium</a>
           </div>
         </div>
 
@@ -1113,11 +1192,11 @@ footer a:hover { color: white; }
         <div class="compare-footer">
           <div class="compare-feature-col"></div>
           <div class="compare-cell" style="padding: 28px 16px;">
-            <a href="#store" class="compare-btn compare-btn-standard">🚀 Get Standard</a>
+            <a href="https://swn.agencyhandy.com/catalog/booking-site-software-online-appointment-and-scheduling-platform-copy-1777800156474362" target="_blank" class="compare-btn compare-btn-standard">🚀 Get Standard</a>
             <div style="font-size:12px; opacity:0.6; margin-top:10px; color:var(--text-mid);">Cancel any time</div>
           </div>
           <div class="compare-cell compare-cell-premium" style="padding: 28px 16px;">
-            <a href="#store" class="compare-btn compare-btn-premium">🌐 Get Premium</a>
+            <a href="https://swn.agencyhandy.com/catalog/booking-site-software-online-appointment-and-scheduling-platform-copy-1777800156474362" target="_blank" class="compare-btn compare-btn-premium">🌐 Get Premium</a>
             <div style="font-size:12px; opacity:0.8; margin-top:10px; color:white;">Cancel any time</div>
           </div>
         </div>
@@ -1125,13 +1204,106 @@ footer a:hover { color: white; }
       </div><!-- end compare-table -->
     </div><!-- end compare-wrap -->
 
+    <!-- Mobile plan slider (hidden on desktop) -->
+    <div class="mobile-compare">
+      <div class="mobile-plan-tabs">
+        <button class="mobile-tab-btn active" onclick="switchMobilePlan(0, this)">🚀 Standard <em>€20/mo</em></button>
+        <button class="mobile-tab-btn" onclick="switchMobilePlan(1, this)">🌐 Premium <em>€23/mo</em></button>
+      </div>
+      <div class="mobile-plan-slider">
+        <div class="mobile-plan-track" id="mplanTrack">
+
+          <!-- Standard -->
+          <div class="mobile-plan-card">
+            <div class="mobile-plan-header mplan-header-std">
+              <div class="mobile-plan-label">Monthly</div>
+              <div class="mobile-plan-name">Standard</div>
+              <div class="mobile-plan-price"><sup>€</sup>20<small>/mo</small></div>
+              <a href="https://swn.agencyhandy.com/catalog/booking-site-software-online-appointment-and-scheduling-platform-copy-1777800156474362" target="_blank" class="compare-btn compare-btn-standard" style="margin-top:8px;">🚀 Get Standard</a>
+            </div>
+            <div class="mobile-feature-list">
+              <div class="mobile-feature-group">Hosting &amp; Setup</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Full hosting included</div>
+              <div class="mobile-feature-row"><span class="ci ci-no">✗</span> Connect your own custom domain</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Embeddable booking form</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> WordPress plugin</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Unlimited booking page templates</div>
+              <div class="mobile-feature-group">Bookings &amp; Payments</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Unlimited bookings &amp; services</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Stripe, PayPal, Square &amp; more</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Deposit payments</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Automated invoicing &amp; tax rates</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Coupons, gift cards &amp; promotions</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Ratings &amp; reviews</div>
+              <div class="mobile-feature-group">Team Management</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Unlimited employees with no per-seat fees</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Employee commissions</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Multi-staff &amp; multi-location</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Custom roles &amp; permissions</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Google, Outlook &amp; Apple Calendar sync</div>
+              <div class="mobile-feature-group">Notifications &amp; Integrations</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Unlimited email notifications</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Custom SMTP (send from your own email)</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Zapier, Webhooks &amp; API</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Mailchimp, Google Analytics, Facebook Pixel</div>
+              <div class="mobile-feature-footer">
+                <a href="https://swn.agencyhandy.com/catalog/booking-site-software-online-appointment-and-scheduling-platform-copy-1777800156474362" target="_blank" class="compare-btn compare-btn-standard">🚀 Get Standard</a>
+                <div class="mobile-cancel-note">Cancel any time</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Premium -->
+          <div class="mobile-plan-card">
+            <div class="mobile-plan-header mplan-header-prem">
+              <div class="mobile-plan-badge">Most Popular</div>
+              <div class="mobile-plan-name">Premium</div>
+              <div class="mobile-plan-price"><sup>€</sup>23<small>/mo</small></div>
+              <a href="https://swn.agencyhandy.com/catalog/booking-site-software-online-appointment-and-scheduling-platform-copy-1777800156474362" target="_blank" class="compare-btn compare-btn-premium" style="margin-top:8px;">🌐 Get Premium</a>
+            </div>
+            <div class="mobile-feature-list">
+              <div class="mobile-feature-group">Hosting &amp; Setup</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Full hosting included</div>
+              <div class="mobile-feature-row"><span class="ci ci-star">✓</span> Connect your own custom domain</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Embeddable booking form</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> WordPress plugin</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Unlimited booking page templates</div>
+              <div class="mobile-feature-group">Bookings &amp; Payments</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Unlimited bookings &amp; services</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Stripe, PayPal, Square &amp; more</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Deposit payments</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Automated invoicing &amp; tax rates</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Coupons, gift cards &amp; promotions</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Ratings &amp; reviews</div>
+              <div class="mobile-feature-group">Team Management</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Unlimited employees with no per-seat fees</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Employee commissions</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Multi-staff &amp; multi-location</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Custom roles &amp; permissions</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Google, Outlook &amp; Apple Calendar sync</div>
+              <div class="mobile-feature-group">Notifications &amp; Integrations</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Unlimited email notifications</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Custom SMTP (send from your own email)</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Zapier, Webhooks &amp; API</div>
+              <div class="mobile-feature-row"><span class="ci ci-yes">✓</span> Mailchimp, Google Analytics, Facebook Pixel</div>
+              <div class="mobile-feature-footer" style="background:linear-gradient(160deg,#1A0A6B 0%,#2B1FD9 100%);">
+                <a href="https://swn.agencyhandy.com/catalog/booking-site-software-online-appointment-and-scheduling-platform-copy-1777800156474362" target="_blank" class="compare-btn compare-btn-premium">🌐 Get Premium</a>
+                <div class="mobile-cancel-note" style="color:rgba(255,255,255,0.6);">Cancel any time</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- end mobile-compare -->
+
     <p style="text-align:center; margin-top:24px; font-size:13px; color:var(--text-light);">Both plans include full hosting. Premium adds the ability to connect your own domain name (e.g. yourbusiness.com/book).</p>
 
   </div>
 </section>
 
 <!-- STORE / ORDER -->
-<section id="store" style="padding: 60px 40px 60px; background: white;">
+<section id="store" style="background: white;">
   <div style="max-width:800px; margin:0 auto; text-align:center;">
     <div class="section-tag">Order Now</div>
     <h2 class="section-title">How to Get Your Booking Site</h2>
@@ -1194,9 +1366,9 @@ footer a:hover { color: white; }
 <!-- FAQ -->
 <section class="faq-section">
   <div class="container">
-    <div style="display:flex; align-items:center; justify-content:center; gap:40px; margin-bottom:48px; flex-wrap:wrap;">
-      <img src="brand_assets/cute-astronaut-standing-next-to-large-red-question-mark-faq-help-illustration.webp" alt="" style="width:180px;height:180px;object-fit:contain;flex-shrink:0;">
-      <div style="text-align:left;">
+    <div style="display:flex; align-items:center; justify-content:center; gap:40px; margin-bottom:48px; flex-wrap:wrap; text-align:center;">
+      <img src="brand_assets/cute-astronaut-standing-next-to-large-red-question-mark-faq-help-illustration.webp" alt="" style="width:153px;height:153px;object-fit:contain;flex-shrink:0;">
+      <div style="text-align:left; min-width:0;">
         <div class="section-tag">FAQ</div>
         <h2 class="section-title">Common Questions</h2>
         <p style="font-size:16px;color:var(--text-light);margin-top:8px;max-width:380px;line-height:1.6;">Everything you need to know before getting started.</p>
@@ -1208,7 +1380,7 @@ footer a:hover { color: white; }
           How quickly can I get started?
           <span class="faq-chevron">▾</span>
         </button>
-        <div class="faq-a">After purchasing, you'll receive access to your booking dashboard within 4 business days. From there, most businesses are fully set up and taking bookings within minutes. Just choose a template, add your services, and share your link.</div>
+        <div class="faq-a">Once your order is confirmed, we'll have your booking dashboard ready within 2 to 4 business days. From there, getting set up is straightforward. Choose a template, add your services and availability, and share your booking link. Most businesses are live and taking bookings on the same day they receive access.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
@@ -1263,7 +1435,7 @@ footer a:hover { color: white; }
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 Start Booking Now · <a href="#">Home</a> · <a href="#">Services</a> · <a href="#">Contact</a></p>
+  <p>© 2026 Start Booking Now · <a href="#">Home</a> · <a href="#">Services</a> · <a href="#">Contact</a></p>
   <p style="margin-top:8px; font-size:13px;">Part of the <a href="https://startwebsitenow.com" target="_blank">Start Website Now</a> group. Websites Built to Grow Your Business.</p>
 </footer>
 
@@ -1362,6 +1534,13 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   buildPhrase(texts[0], 'in');
   timer = setTimeout(exitThenNext, HOLD);
 })();
+
+// Mobile plan slider
+function switchMobilePlan(idx, btn) {
+  document.getElementById('mplanTrack').style.transform = 'translateX(-' + (idx * 100) + '%)';
+  document.querySelectorAll('.mobile-tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+}
 
 // FAQ — only one open at a time
 function toggleFaq(btn) {
