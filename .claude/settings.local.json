@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($lines = Get-Content \"c:\\\\Users\\\\Dave\\\\Documents\\\\Websites Work\\\\Startbookingnow\\\\booking-page\\(6\\).html\"; $lines[5..9] | ForEach-Object { $_.Substring\\(0, [Math]::Min\\(400, $_.Length\\)\\) })",
+      "PowerShell($lines = Get-Content \"c:\\\\Users\\\\Dave\\\\Documents\\\\Websites Work\\\\Startbookingnow\\\\booking-page\\(6\\).html\"; $lines[663..670] | ForEach-Object { $_.Substring\\(0, [Math]::Min\\(500, $_.Length\\)\\) })",
+      "PowerShell(node \"c:\\\\Users\\\\Dave\\\\Documents\\\\Websites Work\\\\Startbookingnow\\\\serve.mjs\")",
+      "PowerShell(Get-Command node -ErrorAction SilentlyContinue; Get-ChildItem \"C:\\\\Program Files\\\\nodejs\\\\node.exe\" -ErrorAction SilentlyContinue; Get-ChildItem \"$env:APPDATA\\\\npm\\\\node.cmd\" -ErrorAction SilentlyContinue; where.exe node 2>$null)",
+      "PowerShell(python --version 2>&1)",
+      "PowerShell(python3 --version 2>&1)",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 3)",
+      "Bash(node serve.mjs)",
+      "Bash(node screenshot.mjs \"http://localhost:3000/booking-page\\(6\\).html\" how-it-works)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Program Files \\(x86\\)/**)",
+      "Read(//c/Users/Dave/AppData/**)",
+      "PowerShell(Get-Command node -ErrorAction SilentlyContinue)",
+      "PowerShell($env:PATH -split ';' | Where-Object { $_ -match 'node|npm|nvm' })",
+      "Bash(ls ~/.claude/projects/ | head -20)",
+      "Read(//c/Users/Dave/.claude/projects/**)",
+      "Bash(python3 -)",
+      "Bash(grep -oh '\"name\":\"PowerShell\",\"input\":{\"command\":\"[^\"]*\"' '~/.claude/projects/c--Users-Dave-Documents-Websites-Work-Startbookingnow/89a12a73-3106-40fc-a7fe-dfb28cdcfd08.jsonl')",
+      "Bash(mkdir -p \"c:/Users/Dave/Documents/Websites Work/Startbookingnow/.claude\")",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git add *)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Dave\\Documents\\Websites Work\\Startbookingnow\\.claude"
+    ]
+  }
+}
