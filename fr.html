@@ -658,7 +658,7 @@ section { padding: 90px 40px; }
 }
 .demo-link:hover .demo-overlay { opacity: 1; }
 .demo-overlay span {
-  background: linear-gradient(135deg, #FF6B35 0%, #e8501a 100%);
+  background: #06D6A0;
   color: white;
   font-weight: 700; font-size: 20px;
   padding: 20px 48px; border-radius: 50px;
@@ -1361,58 +1361,6 @@ footer a:hover { color: white; }
   </div>
 </section>
 
-<!-- STORE / ORDER -->
-<section id="store" style="background: white;">
-  <div style="max-width:800px; margin:0 auto; text-align:center;">
-    <div class="section-tag">Commander maintenant</div>
-    <h2 class="section-title">Comment obtenir votre site de réservation</h2>
-    <p class="section-sub" style="margin:0 auto 32px;">Il ne faut que quelques minutes pour passer votre commande. Les deux formules sont disponibles dans la boutique ci-dessous. Choisissez celle qui vous convient.</p>
-
-    <!-- TextRotate: cycles through the 4 steps -->
-    <div style="margin-bottom:48px;">
-      <div id="store-text-rotate" class="tr-root" style="font-family:'Ubuntu',sans-serif;font-weight:900;font-size:clamp(20px,3.5vw,36px);color:var(--blue-main);min-height:1.5em;width:100%;"></div>
-    </div>
-  </div>
-
-  <!-- Steps -->
-  <div style="max-width:720px; margin:0 auto 56px; display:flex; flex-direction:column; gap:20px;">
-
-    <div style="display:flex; align-items:flex-start; gap:20px; background:var(--blue-pale); border-radius:var(--radius-md); padding:24px 28px;">
-      <div style="min-width:40px; height:40px; border-radius:50%; background:var(--blue-main); color:white; font-family:'Nunito',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</div>
-      <div>
-        <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:17px; color:var(--text-dark); margin-bottom:6px;">Parcourez et sélectionnez votre formule</div>
-        <p style="font-size:14px; color:var(--text-mid); line-height:1.6;">Dans la boutique ci-dessous, vous trouverez notre formule Site de réservation. Cliquez sur <strong>Commander maintenant</strong> pour la sélectionner et l'ajouter à votre panier.</p>
-      </div>
-    </div>
-
-    <div style="display:flex; align-items:flex-start; gap:20px; background:var(--blue-pale); border-radius:var(--radius-md); padding:24px 28px;">
-      <div style="min-width:40px; height:40px; border-radius:50%; background:var(--blue-main); color:white; font-family:'Nunito',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">2</div>
-      <div>
-        <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:17px; color:var(--text-dark); margin-bottom:6px;">Finalisez votre achat</div>
-        <p style="font-size:14px; color:var(--text-mid); line-height:1.6;">Vous serez redirigé vers la <strong>boutique Start Website Now</strong> pour finaliser votre paiement en toute sécurité. Renseignez vos coordonnées et confirmez votre commande. Cela ne prend qu'une minute.</p>
-      </div>
-    </div>
-
-    <div style="display:flex; align-items:flex-start; gap:20px; background:var(--blue-pale); border-radius:var(--radius-md); padding:24px 28px;">
-      <div style="min-width:40px; height:40px; border-radius:50%; background:var(--blue-main); color:white; font-family:'Nunito',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">3</div>
-      <div>
-        <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:17px; color:var(--text-dark); margin-bottom:6px;">Recevez vos accès</div>
-        <p style="font-size:14px; color:var(--text-mid); line-height:1.6;">Une fois votre commande confirmée, nous nous chargeons de configurer votre compte. Vous recevrez vos identifiants de connexion et les prochaines étapes par e-mail <strong>dans un délai de 4 jours ouvrés</strong>.</p>
-      </div>
-    </div>
-
-    <div style="display:flex; align-items:flex-start; gap:20px; background:var(--blue-pale); border-radius:var(--radius-md); padding:24px 28px;">
-      <div style="min-width:40px; height:40px; border-radius:50%; background:var(--green); color:white; font-family:'Nunito',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">✓</div>
-      <div>
-        <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:17px; color:var(--text-dark); margin-bottom:6px;">Vous êtes en ligne et recevez des réservations</div>
-        <p style="font-size:14px; color:var(--text-mid); line-height:1.6;">Connectez-vous à votre tableau de bord de réservation, ajoutez vos services et vos horaires, et partagez votre lien. La plupart des entreprises sont configurées et reçoivent des réservations le jour même où elles obtiennent leur accès.</p>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
 <!-- DEMO SECTION -->
 <section class="demo-section" id="demo">
   <div class="container">
@@ -1434,9 +1382,6 @@ footer a:hover { color: white; }
         <img src="brand_assets/demo-screenshot.png" alt="Démonstration du site de réservation en direct">
         <div class="demo-overlay"><span>Voir la démo en direct →</span></div>
       </a>
-    </div>
-    <div style="text-align:center; margin-top:32px;">
-      <a href="https://startbookingnow.wlbookings.com/" target="_blank" rel="noopener" class="btn-primary">🔗 Ouvrir la démo en direct</a>
     </div>
   </div>
 </section>
@@ -1500,10 +1445,53 @@ footer a:hover { color: white; }
 </section>
 
 <!-- CTA BANNER -->
-<section class="cta-banner">
+<section id="store" class="cta-banner">
   <div class="container">
     <h2>Prêt à commencer à recevoir des réservations ?</h2>
-    <p>Accédez à votre tableau de bord de réservation en 4 jours ouvrés. Configuré en quelques minutes, commencez à générer des revenus immédiatement.</p>
+    <p>Il ne faut que quelques minutes pour vous lancer. Voici exactement ce qui se passe après votre commande.</p>
+
+    <!-- TextRotate: cycles through the 4 steps -->
+    <div style="margin-bottom:40px;">
+      <div id="store-text-rotate" class="tr-root" style="font-family:'Ubuntu',sans-serif;font-weight:900;font-size:clamp(20px,3.5vw,36px);color:white;min-height:1.5em;width:100%;"></div>
+    </div>
+
+    <!-- Steps -->
+    <div style="max-width:680px; margin:0 auto 48px; display:flex; flex-direction:column; gap:16px; text-align:left;">
+
+      <div style="display:flex; align-items:flex-start; gap:20px; background:rgba(255,255,255,0.12); border-radius:var(--radius-md); padding:20px 24px;">
+        <div style="min-width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.25); color:white; font-family:'Nunito',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</div>
+        <div>
+          <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:17px; color:white; margin-bottom:4px;">Parcourez et sélectionnez votre formule</div>
+          <p style="font-size:14px; color:rgba(255,255,255,0.75); line-height:1.6; margin:0;">Choisissez Standard ou Premium et cliquez sur <strong style="color:white;">Commander maintenant</strong> pour l'ajouter à votre panier.</p>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:20px; background:rgba(255,255,255,0.12); border-radius:var(--radius-md); padding:20px 24px;">
+        <div style="min-width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.25); color:white; font-family:'Nunito',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">2</div>
+        <div>
+          <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:17px; color:white; margin-bottom:4px;">Finalisez votre achat</div>
+          <p style="font-size:14px; color:rgba(255,255,255,0.75); line-height:1.6; margin:0;">Finalisez votre paiement en toute sécurité via la <strong style="color:white;">boutique Start Website Now</strong>. Cela prend environ une minute.</p>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:20px; background:rgba(255,255,255,0.12); border-radius:var(--radius-md); padding:20px 24px;">
+        <div style="min-width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.25); color:white; font-family:'Nunito',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">3</div>
+        <div>
+          <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:17px; color:white; margin-bottom:4px;">Recevez vos accès</div>
+          <p style="font-size:14px; color:rgba(255,255,255,0.75); line-height:1.6; margin:0;">Vos identifiants arrivent par e-mail <strong style="color:white;">dans un délai de 4 jours ouvrés</strong>.</p>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:20px; background:rgba(255,255,255,0.15); border-radius:var(--radius-md); padding:20px 24px; border:1px solid rgba(255,255,255,0.2);">
+        <div style="min-width:40px; height:40px; border-radius:50%; background:var(--green); color:white; font-family:'Nunito',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">✓</div>
+        <div>
+          <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:17px; color:white; margin-bottom:4px;">Vous êtes en ligne et recevez des réservations</div>
+          <p style="font-size:14px; color:rgba(255,255,255,0.75); line-height:1.6; margin:0;">Ajoutez vos services, définissez vos horaires, partagez votre lien. La plupart des entreprises sont en ligne le jour même.</p>
+        </div>
+      </div>
+
+    </div>
+
     <div class="cta-btns">
       <a href="#pricing" class="btn-primary">🚀 Obtenez votre site de réservation</a>
       <a href="#features" class="btn-secondary">Voir toutes les fonctionnalités →</a>

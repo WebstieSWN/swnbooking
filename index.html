@@ -658,7 +658,7 @@ section { padding: 90px 40px; }
 }
 .demo-link:hover .demo-overlay { opacity: 1; }
 .demo-overlay span {
-  background: linear-gradient(135deg, #FF6B35 0%, #e8501a 100%);
+  background: #06D6A0;
   color: white;
   font-weight: 700; font-size: 20px;
   padding: 20px 48px; border-radius: 50px;
@@ -1361,58 +1361,6 @@ footer a:hover { color: white; }
   </div>
 </section>
 
-<!-- STORE / ORDER -->
-<section id="store" style="background: white;">
-  <div style="max-width:800px; margin:0 auto; text-align:center;">
-    <div class="section-tag">Order Now</div>
-    <h2 class="section-title">How to Get Your Booking Site</h2>
-    <p class="section-sub" style="margin:0 auto 32px;">It only takes a few minutes to place your order. Both plans are available in the store below. Choose the one that's right for you.</p>
-
-    <!-- TextRotate: cycles through the 4 steps -->
-    <div style="margin-bottom:48px;">
-      <div id="store-text-rotate" class="tr-root" style="font-family:'Ubuntu',sans-serif;font-weight:900;font-size:clamp(20px,3.5vw,36px);color:var(--blue-main);min-height:1.5em;width:100%;"></div>
-    </div>
-  </div>
-
-  <!-- Steps -->
-  <div style="max-width:720px; margin:0 auto 56px; display:flex; flex-direction:column; gap:20px;">
-
-    <div style="display:flex; align-items:flex-start; gap:20px; background:var(--blue-pale); border-radius:var(--radius-md); padding:24px 28px;">
-      <div style="min-width:40px; height:40px; border-radius:50%; background:var(--blue-main); color:white; font-family:'Nunito',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</div>
-      <div>
-        <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:17px; color:var(--text-dark); margin-bottom:6px;">Browse & Select Your Plan</div>
-        <p style="font-size:14px; color:var(--text-mid); line-height:1.6;">In the store below, you'll see our Booking Site plan. Click <strong>Order Now</strong> to select it and add it to your cart.</p>
-      </div>
-    </div>
-
-    <div style="display:flex; align-items:flex-start; gap:20px; background:var(--blue-pale); border-radius:var(--radius-md); padding:24px 28px;">
-      <div style="min-width:40px; height:40px; border-radius:50%; background:var(--blue-main); color:white; font-family:'Nunito',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">2</div>
-      <div>
-        <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:17px; color:var(--text-dark); margin-bottom:6px;">Complete Your Purchase</div>
-        <p style="font-size:14px; color:var(--text-mid); line-height:1.6;">You'll be taken through to the <strong>Start Website Now store</strong> to securely complete your payment. Fill in your details and confirm your order. It only takes a minute.</p>
-      </div>
-    </div>
-
-    <div style="display:flex; align-items:flex-start; gap:20px; background:var(--blue-pale); border-radius:var(--radius-md); padding:24px 28px;">
-      <div style="min-width:40px; height:40px; border-radius:50%; background:var(--blue-main); color:white; font-family:'Nunito',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">3</div>
-      <div>
-        <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:17px; color:var(--text-dark); margin-bottom:6px;">Receive Your Access</div>
-        <p style="font-size:14px; color:var(--text-mid); line-height:1.6;">Once your order is confirmed, we'll get to work setting up your account. You'll receive your login details and next steps by email <strong>within 4 business days</strong>.</p>
-      </div>
-    </div>
-
-    <div style="display:flex; align-items:flex-start; gap:20px; background:var(--blue-pale); border-radius:var(--radius-md); padding:24px 28px;">
-      <div style="min-width:40px; height:40px; border-radius:50%; background:var(--green); color:white; font-family:'Nunito',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">✓</div>
-      <div>
-        <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:17px; color:var(--text-dark); margin-bottom:6px;">You're Live & Taking Bookings</div>
-        <p style="font-size:14px; color:var(--text-mid); line-height:1.6;">Log in to your booking dashboard, add your services and hours, and share your link. Most businesses are set up and taking bookings on the same day.</p>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
 <!-- DEMO SECTION -->
 <section class="demo-section" id="demo">
   <div class="container">
@@ -1434,9 +1382,6 @@ footer a:hover { color: white; }
         <img src="brand_assets/demo-screenshot.png" alt="Live booking site demo">
         <div class="demo-overlay"><span>View Live Demo →</span></div>
       </a>
-    </div>
-    <div style="text-align:center; margin-top:32px;">
-      <a href="https://startbookingnow.wlbookings.com/" target="_blank" rel="noopener" class="btn-primary">🔗 Open Live Demo</a>
     </div>
   </div>
 </section>
@@ -1500,10 +1445,53 @@ footer a:hover { color: white; }
 </section>
 
 <!-- CTA BANNER -->
-<section class="cta-banner">
+<section id="store" class="cta-banner">
   <div class="container">
     <h2>Ready to Start Taking Bookings?</h2>
-    <p>Get access to your booking dashboard within 4 business days. Set up in minutes, start earning straight away.</p>
+    <p>It only takes a few minutes to get set up. Here's exactly what happens after you order.</p>
+
+    <!-- TextRotate: cycles through the 4 steps -->
+    <div style="margin-bottom:40px;">
+      <div id="store-text-rotate" class="tr-root" style="font-family:'Ubuntu',sans-serif;font-weight:900;font-size:clamp(20px,3.5vw,36px);color:white;min-height:1.5em;width:100%;"></div>
+    </div>
+
+    <!-- Steps -->
+    <div style="max-width:680px; margin:0 auto 48px; display:flex; flex-direction:column; gap:16px; text-align:left;">
+
+      <div style="display:flex; align-items:flex-start; gap:20px; background:rgba(255,255,255,0.12); border-radius:var(--radius-md); padding:20px 24px;">
+        <div style="min-width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.25); color:white; font-family:'Nunito',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</div>
+        <div>
+          <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:17px; color:white; margin-bottom:4px;">Browse & Select Your Plan</div>
+          <p style="font-size:14px; color:rgba(255,255,255,0.75); line-height:1.6; margin:0;">Choose Standard or Premium and click <strong style="color:white;">Order Now</strong> to add it to your cart.</p>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:20px; background:rgba(255,255,255,0.12); border-radius:var(--radius-md); padding:20px 24px;">
+        <div style="min-width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.25); color:white; font-family:'Nunito',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">2</div>
+        <div>
+          <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:17px; color:white; margin-bottom:4px;">Complete Your Purchase</div>
+          <p style="font-size:14px; color:rgba(255,255,255,0.75); line-height:1.6; margin:0;">Securely check out through the <strong style="color:white;">Start Website Now store</strong>. Takes about a minute.</p>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:20px; background:rgba(255,255,255,0.12); border-radius:var(--radius-md); padding:20px 24px;">
+        <div style="min-width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.25); color:white; font-family:'Nunito',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">3</div>
+        <div>
+          <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:17px; color:white; margin-bottom:4px;">Receive Your Access</div>
+          <p style="font-size:14px; color:rgba(255,255,255,0.75); line-height:1.6; margin:0;">Your login details arrive by email <strong style="color:white;">within 4 business days</strong>.</p>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:20px; background:rgba(255,255,255,0.15); border-radius:var(--radius-md); padding:20px 24px; border:1px solid rgba(255,255,255,0.2);">
+        <div style="min-width:40px; height:40px; border-radius:50%; background:var(--green); color:white; font-family:'Nunito',sans-serif; font-weight:900; font-size:18px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">✓</div>
+        <div>
+          <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:17px; color:white; margin-bottom:4px;">You're Live & Taking Bookings</div>
+          <p style="font-size:14px; color:rgba(255,255,255,0.75); line-height:1.6; margin:0;">Add your services, set your hours, share your link. Most businesses go live on the same day.</p>
+        </div>
+      </div>
+
+    </div>
+
     <div class="cta-btns">
       <a href="#pricing" class="btn-primary">🚀 Get Your Booking Site</a>
       <a href="#features" class="btn-secondary">See All Features →</a>
