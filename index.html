@@ -790,6 +790,15 @@ footer a:hover { color: white; }
   .cta-banner p { font-size: 15px; }
   .cta-btns { flex-direction: column; align-items: center; gap: 18px; }
   footer { padding: 30px 20px; }
+  /* Mobile-only text utilities */
+  .desktop-br { display: none; }
+  .mobile-hide { display: none; }
+  .mobile-only { display: inline; }
+  .faq-header-inner { text-align: center !important; }
+}
+
+@media (min-width: 641px) {
+  .mobile-only { display: none; }
 }
 
 @media (max-width: 400px) {
@@ -1067,7 +1076,7 @@ footer a:hover { color: white; }
     <div style="text-align:center; margin-bottom: 48px;">
       <div class="section-tag" style="background:rgba(255,255,255,0.2); color:white;">Perfect For</div>
       <h2 class="section-title">Built for Every<br>Service Business</h2>
-      <p class="section-sub" style="margin:0 auto;">Any business that runs on appointments can benefit from an<br>online booking system.</p>
+      <p class="section-sub" style="margin:0 auto;">Any business that runs on appointments can benefit from an <br class="desktop-br">online booking system.</p>
     </div>
     <div class="industries-grid">
       <div class="industry-card fade-in"><span class="industry-emoji">💇</span><div class="industry-name">Beauty & Hair Salons</div></div>
@@ -1088,7 +1097,7 @@ footer a:hover { color: white; }
     <div class="section-tag">Why Start Booking Now</div>
     <h2 class="section-title" style="margin-bottom:20px;">Enterprise Software.<br>Without the Enterprise Price.</h2>
     <p class="enterprise-body" style="font-size:17px; color:var(--text-mid); line-height:1.7; max-width:680px; margin:0 auto 40px; text-align:left;">
-      As part of the Start Website Now Group, we believe powerful tools shouldn't carry a punishing price tag. That's why we forge direct partnerships with industry-leading software providers, negotiating access to their top-tier plans so we can pass the real value on to you. What you get here is the same technology used by growing businesses worldwide, served at a price that makes sense for where you are right now.
+      As part of the Start Website Now Group, we believe powerful tools shouldn't carry a punishing price tag. That's why we forge direct partnerships with industry-leading software providers, negotiating access to their top-tier plans so we can pass the real value on to you. What you get here is the same technology used by growing businesses worldwide, served at a price that makes sense<span class="mobile-hide"> for where you are right now</span><span class="mobile-only"> for you</span>.
     </p>
     <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
       <div style="display:flex; align-items:center; background:var(--blue-pale); padding:14px 22px; border-radius:50px; font-size:16px; font-weight:700; color:var(--text-dark);">
@@ -1398,10 +1407,10 @@ footer a:hover { color: white; }
   <div class="container">
     <div style="display:flex; align-items:center; justify-content:center; gap:40px; margin-bottom:48px; flex-wrap:wrap; text-align:center;">
       <img src="brand_assets/cute-astronaut-standing-next-to-large-red-question-mark-faq-help-illustration.webp" alt="" style="width:153px;height:153px;object-fit:contain;flex-shrink:0;">
-      <div style="text-align:left; min-width:0;">
+      <div class="faq-header-inner" style="text-align:left; min-width:0;">
         <div class="section-tag">FAQ</div>
         <h2 class="section-title">Common Questions</h2>
-        <p style="font-size:16px;color:var(--text-light);margin-top:8px;max-width:380px;line-height:1.6;">Everything you need to know before getting started.</p>
+        <p style="font-size:16px;color:var(--text-light);margin-top:8px;max-width:380px;line-height:1.6;">Everything you need to know before <span class="mobile-hide">getting started</span><span class="mobile-only">starting</span>.</p>
       </div>
     </div>
     <div class="faq-grid">
